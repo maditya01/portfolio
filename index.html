@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Personal Portfolio</title>
+</head>
+
+<body>
+    <!-------------------- Header----------------------- -->
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="images/images/India.webp" alt="Logo" class="logo">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Projects</a></li>
+                    <li><a href="#">Portfolio</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-text">
+                <p>Engineer</p>
+                <h1>Hi, I'm <span>Aditya Maurya</span><br /> from India</h1>
+            </div>
+        </div>
+
+    </div>
+    <!--------------ABOUT   ---------------------- -->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/images/ME.jpg" alt="">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p class="about-text">I am From KAUSHAMBI,Prayagraj Uttar Pradesh India. I am a student. I am curios
+                        in engineering
+                        behind great software application.
+                        I love to build great and scalable software systems. Love to play and watch Cricket. Try to
+                        create a happy surrounding around me.
+                    </p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-links" onClick="openTab('skills')">Skills</p>
+                        <p class="tab-links" onClick="openTab('experience')">Experience</p>
+                        <p class="tab-links" onClick="openTab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tabs" id="skills">
+                        <ul>
+                            <li><span>Software Engineer</span><br>Doing Engineering to make great application</li>
+                            <li><span>Problem Solving</span><br>Solving problems to develop intuition</li>
+                            <li><span>Web Developer</span> <br>Doing Engineering to make grate application</li>
+                            <li><span>App Developer(Flutter)</span><br>Doing Engineering to make grate application</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>Fresher</span><br>Recent College Graduate</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span class="btech">MOTILAL NEHRU NATIONAL INSTITUTE OF TECHNOLOGY(MNNIT)
+                                    Prayagraj, Allahabad Uttar Pradesh</span><br>
+                                Completed Bachelor's Degree In Computer Science and Engineering</li>
+                            <li><span>SKSSAIC CHUHA PIRAN KAUSHAMBI</span><br>Completed Senior Secondary(11th,12th) in
+                                Mathematics
+                            </li>
+                            <li><span>SAV INTER COLL SAINI SIRATHU KAUSHAMBI</span> <br>Completed High School(9th,10th)
+                                in Science
+                                and Mathematics</li>
+                            <li><span>Dhanpatti Devi Shayam Narayan Ic Thugula Kaushambi
+                                </span> <br>Completed 7th and 8th</li>
+                            <li><span>VIJAY GYAN MANDIR MOHABBAT PUR JEETA</span><br>Completed LKG to 6th Standard</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="services">
+        <div class="container">
+            <h1 class="sub-title">My Services</h1>
+            <div class="services-list">
+                <div>
+                    <h2>No Services</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- CONTAINER -->
+    <div id="portfolio">
+        <div class="container">
+
+        </div>
+    </div>
+    <script>
+        var tablinks = document.getElementsByClassName('tab-links');
+        var tabcontents = document.getElementsByClassName('tab-contents');
+        function openTab(tabname) {
+            for (tablink of tablinks) {
+                tablink.classList.remove("active-links");
+            }
+            for (tabcontent of tabcontents) {
+                tabcontent.classList.remove("active-tabs");
+            }
+            event.currentTarget.classList.add("active-links");
+            // event.currentTarget.classList.add("active-tabs");
+            document.getElementById(tabname).classList.add("active-tabs");
+        }
+
+    </script>
+</body>
+
+</html>
